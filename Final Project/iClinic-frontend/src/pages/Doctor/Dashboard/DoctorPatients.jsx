@@ -59,7 +59,6 @@ function SinglePatient({
         </td>
       </tr>
 
-      {/* Mobile View */}
       <div className="d-md-none border rounded p-3 mb-3">
         <div className="d-flex justify-content-between align-items-start mb-3">
           <div className="d-flex align-items-center">

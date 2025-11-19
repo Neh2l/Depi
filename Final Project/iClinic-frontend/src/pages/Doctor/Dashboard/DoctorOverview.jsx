@@ -46,7 +46,7 @@ const DoctorOverview = () => {
           <div className={styles.info}>
             <p>
               <FaPhone className={styles.icon} />
-              <span>{doctor.phone || 'No phone provided'}</span>
+              <span>{doctor.phone || 'No phone providedd'}</span>
             </p>
             <p>
               <FaEnvelope className={styles.icon} />
