@@ -24,7 +24,6 @@ const DoctorMessages = () => {
       const res = await axios.get(`${API_BASE}/doctors/myPatients`, {
         headers: { Authorization: `Bearer ${token}` }
       });
-      // هنا المفروض الـ backend يرجع الـ patients كـ objects كاملة
       setPatients(res.data.data.patients || []);
     } catch (err) {
       console.error('Failed to fetch patients', err);
@@ -37,7 +36,6 @@ const DoctorMessages = () => {
     setShowChatList(false);
 
     try {
-      // تصحيح الـ endpoint: conv مش conversation
       const res = await axios.get(`${API_BASE}/messages/conv/${patient._id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -57,7 +55,7 @@ const DoctorMessages = () => {
         `${API_BASE}/messages/send`,
         {
           message: newMessage,
-          receiverId: selectedPatient._id // ✅ receiverId مش patientId
+          receiverId: selectedPatient._id
         },
         { headers: { Authorization: `Bearer ${token}` } }
       );
